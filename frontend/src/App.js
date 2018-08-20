@@ -55,13 +55,13 @@ class App extends Component {
   }
   render() {
     const stations = this.state.places.map((place, index) => {
-        return (
-            <Station key={index} name={place.StopPlace} departures={place.Times} />
-        );
+      return (
+        <Station key={index} name={place.StopPlace} departures={place.Times} />
+      );
     });
     return (
       <div className="App">
-      <h1>EnTur Sanntid</h1>
+        <h1>EnTur Sanntid</h1>
         {stations}
       </div>
     );
