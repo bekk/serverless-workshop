@@ -50,3 +50,14 @@ claudia create --region eu-west-3 \
 claudia update
 claudia test-lambda
 ```
+
+---
+
+## Sette opp trigger
+
+```
+claudia add-scheduled-event \
+--name hent-buss-tider \
+--rate "5 minutes" \
+--event event.json
+```
