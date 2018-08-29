@@ -1,0 +1,44 @@
+body {
+  background-color: #0E0E0E;
+  color: #FFFFFF;
+  font-family: 'Calibri';
+}
+
+.App {
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1000px;
+}
+
+.station {
+  text-align: left;
+  width: 400px;
+  margin: 0 auto;
+  color: #162365;
+}
+
+.station h2 {
+  color: #FFFFFF;
+}
+
+.departure {
+  background-color: #CECECE;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.departureTimeContainer {
+  display: inline-block;
+  margin-right: 30px;
+  min-width: 70px;
+}
+
+.realtime {
+  display: inline-block;
+  margin-right: 5px;
+  height: 15px;
+  width: 15px;
+  background: url('realtime.png') no-repeat;
+  background-size: 15px 15px;
+}
