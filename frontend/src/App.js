@@ -26,7 +26,6 @@ class App extends Component {
     setInterval(() => this.fetchData(), 10000);
   }
   render() {
-    console.log('state render', this.state);
     const stations = this.state.Stations.map((station, index) => {
       return (
         <Station key={index} name={station.StopPlace} departures={station.Times} />
