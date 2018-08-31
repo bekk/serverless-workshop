@@ -1,62 +1,34 @@
 import React, { Component } from 'react';
+import fetch from 'node-fetch';
 import Station from './Station';
 import './App.css';
+
+const API_URL = 'https://1wp8xzhe90.execute-api.eu-west-3.amazonaws.com/latest/vippetangen';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      places: []
+      Stations: []
     }
   }
 
-  componentDidMount() {
-    const json = [
-      {
-        StopPlace: 'Vippetangen',
-        Times: [
-          {
-            line: "Vippetangen - Tonsenhagen",
-            expectedDeparture: "15:17",
-            realtime: true
-          },
-          {
-            line: "Vippetangen - Tonsenhagen",
-            expectedDeparture: "15:32",
-            realtime: false
-          }
-        ]
-      },
-      {
-        StopPlace: 'Oslo S',
-        Times: [
-          {
-            line: "Oslo S - Bygdøy",
-            expectedDeparture: "15:17",
-            realtime: true
-          },
-          {
-            line: "Oslo S - Helsfyr",
-            expectedDeparture: "15:32",
-            realtime: false
-          },
-          {
-            line: "Oslo S - Helsfyr",
-            expectedDeparture: "15:32",
-            realtime: true
-          }
-        ]
-      }
-    ];
-
+  async fetchData () {
+    const response = await fetch(API_URL);
+    const json = await response.json();
     this.setState({
-      places: json
+      Stations: [json.Item]
     })
   }
+
+  componentDidMount() {
+    this.fetchData();
+    setInterval(() => this.fetchData(), 10000);
+  }
   render() {
-    const stations = this.state.places.map((place, index) => {
+    const stations = this.state.Stations.map((station, index) => {
       return (
-        <Station key={index} name={place.StopPlace} departures={place.Times} />
+        <Station key={index} name={station.StopPlace} departures={station.Times} />
       );
     });
     return (
