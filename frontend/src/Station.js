@@ -8,7 +8,7 @@ class Station extends Component {
     const duration = moment.duration(momentDate.diff(moment()));
     const minutes = Math.ceil(duration.asMinutes());
 
-    if (minutes === 0) {
+    if (minutes <= 0) {
       return 'nå';
     } else if (minutes <= 10) {
       return minutes + ' min';

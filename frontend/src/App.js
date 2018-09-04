@@ -3,7 +3,8 @@ import fetch from 'node-fetch';
 import Station from './Station';
 import './App.css';
 
-const API_URL = 'https://1wp8xzhe90.execute-api.eu-west-3.amazonaws.com/latest/vippetangen';
+const API_URL = 'https://1wp8xzhe90.execute-api.eu-west-3.amazonaws.com/latest';
+const STATION = 'vippetangen'
 
 class App extends Component {
   constructor(props) {
@@ -14,7 +15,7 @@ class App extends Component {
   }
 
   async fetchData () {
-    const response = await fetch(API_URL);
+    const response = await fetch(API_URL + '/' + STATION);
     const json = await response.json();
     this.setState({
       Stations: [json.Item]
