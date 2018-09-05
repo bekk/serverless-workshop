@@ -36,7 +36,7 @@ aws_secret_access_key = <Secret Access Key>
 
 ---
 
-Da er det på tide å begynne å programmere.
+Da er det på tide å begynne å programmere. Åpne filen `oppgave1/entur-api-reader.js`
 
 Spørringen til En-tur ser slik ut:
 
