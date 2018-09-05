@@ -3,7 +3,7 @@ import fetch from 'node-fetch';
 import Station from './Station';
 import './App.css';
 
-const API_URL = 'https://1wp8xzhe90.execute-api.eu-west-3.amazonaws.com/latest';
+const API_URL = '<url-til-ditt-api>';
 const STATION = 'vippetangen'
 
 class App extends Component {
