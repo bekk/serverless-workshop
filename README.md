@@ -130,7 +130,7 @@ Gå til katalogen `oppgave2` og kjør `yarn install`. Åpne filen `api.js`.
 For å lage et api-punkt skriver man f.eks:
 
 ```javascript
-api.get("/Vippetangen", async () => {
+api.get("/vippetangen", async () => {
     return "pong";
 });
 ```
