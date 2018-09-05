@@ -92,7 +92,7 @@ For å installere skriver du:
 
 ```shell
 claudia create \
---region eu-west-3 \
+--region <din-region> \
 --name <brukernavn>-reader \
 --handler entur-api-reader.handler \
 --policies policies
@@ -155,12 +155,12 @@ Når funksjonen er klar må den deployes til AWS. Det gjøres slik:
 ```shell
 claudia create \
   --name <brukernavn>-api \
-  --region eu-west-3 \
+  --region <din-region> \
   --api-module api \
   --policies policies
 ```
 
-Når du har kommet hit og testet at api-et funker kan du gå videre til neste oppgave.
+Test at api-et fungerer ved å gå til url-en som ble skrevet ut fra kommandoen (Husk å legge på /vippetangen). F.eks. [https://kxs0txz1x2.execute-api.eu-central-1.amazonaws.com/latest/vippetangen]
 
 # Oppgave 3
 
