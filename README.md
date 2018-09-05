@@ -203,6 +203,8 @@ Da er bøtten ferdig konfigurert og den skal være tilgjengelig på adressen: `h
 
 ## Noen andre bonusoppgaver
 
+Sjekk dokumentasjonen fra [En-tur](https://www.entur.org/dev/api/), [AWS SNS](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#publish-property) og [AWS DynamoDB trigger](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Streams.Lambda.html) for hjelp til å løse disse oppgavene.
+
 *   Implementer tilsvarende funksjonalitet for et annet stoppested eller område.
 *   Lag en lambda som trigges hver gang databasen er oppdatert.
 *   Lag en tjeneste som sender deg sms 5 minutter før bussen går.
