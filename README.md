@@ -93,7 +93,7 @@ For å installere skriver du:
 ```shell
 claudia create \
 --region eu-west-3 \
---name <brukernavn>-reader
+--name <brukernavn>-reader \
 --handler entur-api-reader.handler \
 --policies policies
 ```
@@ -115,7 +115,8 @@ Til slutt må du lage en scheduler som sørger for at buss-tidene i databasen bl
 ```shell
 claudia add-scheduled-event \
 --rate "5 minutes" \
---event event.json
+--event event.json \
+--name <brukernavn>-schedule
 ```
 
 # Oppgave 2
