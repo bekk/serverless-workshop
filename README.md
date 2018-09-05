@@ -83,7 +83,7 @@ const params = {
     },
     TableName: TABLE_NAME,
 };
-return dynamoDB.put(params).promise();
+return await dynamoDB.put(params).promise();
 ```
 
 Dersom du har fått til alt dette, kan du deploye og teste lambdaen.
