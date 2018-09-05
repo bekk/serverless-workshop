@@ -19,7 +19,7 @@ Finn frem til konsollet for DynamoDB og klikk "Create table" for å lage en ny t
 
 ---
 
-Klon dette repositoryet og gå til katalogen `oppgave1` i Terminal og skriver:
+Klon dette repositoryet og gå til katalogen `oppgave1` i en Terminal og skriv:
 
 ```shell
 yarn global add claudia
