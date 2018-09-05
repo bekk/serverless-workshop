@@ -75,7 +75,7 @@ const params = {
         StopPlace: "Vippetangen",
         Times: expectedDepartureTimes,
     },
-    TableName: "DepartureTime",
+    TableName: TABLE_NAME,
 };
 return dynamoDB.put(params).promise();
 ```
@@ -85,7 +85,11 @@ Dersom du har fått til alt dette, kan du deploye og teste lambdaen.
 For å installere skriver du:
 
 ```shell
-claudia create --region eu-west-3 --handler entur-api-reader.handler
+claudia create \
+--region eu-west-3 \
+--name <brukernavn>-reader
+--handler entur-api-reader.handler \
+--policies policies
 ```
 
 For å oppdatere skriver du:
@@ -112,15 +116,9 @@ claudia add-scheduled-event \
 
 Nå har dere en database som jevnlig blir oppdatert med nye data om buss-avganger, så da er det på tide å tilgjengeliggjøre disse dataene gjennom et api.
 
-For å lage et api med claudia må du installere `claudia-api-builder`:
-
-```shell
-yarn add claudia-api-builder
-```
+Gå til katalogen `oppgave2` og kjør `yarn install`. Åpne filen `api.js`.
 
 ---
-
-Gå til katalogen `oppgave2` og åpne filen `api.js`.
 
 For å lage et api-punkt skriver man f.eks:
 
