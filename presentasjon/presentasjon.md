@@ -28,3 +28,5 @@ add-scheduled-event
 *   Dette skal gjøres hvert 5. minutt
 
 Klon [github.com/bekk/serverless-workshop](https://github.com/bekk/serverless-workshop).
+
+Nettverk: BekkGuest/guest7890
