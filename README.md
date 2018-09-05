@@ -10,10 +10,16 @@ Brukernavn, passord og lignende til AWS finner dere [her](https://docs.google.co
 
 ---
 
-Det første dere må gjøre er å opprette en tabell i [DynamoDB](https://aws.amazon.com/dynamodb). Husk hva dere kaller tabellen :)
+Det første dere må gjøre er å opprette en tabell i [DynamoDB](https://aws.amazon.com/dynamodb).
+Finn frem til konsollet for DynamoDB og klikk "Create table" for å lage en ny tabell.
 
-For å sette i gang må dere klone dette repositoryet og sjekke ut branch `oppgave1`.
-Deretter går dere til katalogen Terminal og skriver:
+*   Gi tabellen et valgfritt navn, gjerne brukernavn-DepartureTime
+*   Lag Primary (partition) key med navnet `StopPlace`, type string
+*   Bruk ellers default settings
+
+---
+
+Klon dette repositoryet og gå til katalogen `oppgave1` i Terminal og skriver:
 
 ```shell
 yarn global add claudia
@@ -134,7 +140,7 @@ En måte å gjøre dette på er:
 
 ```JavaScript
 const params = {
-    TableName: "DepartureTime",
+    TableName: TABLE_NAME,
     Key: {
         StopPlace: "Vippetangen",
     },
