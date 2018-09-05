@@ -172,8 +172,7 @@ Vi har laget en enkel frontend-applikasjon for dere som viser alle avgangene som
 *   Kjør kommandoen `npm install` for å installere alle nødvendige avhengigheter.
 *   Åpne filen `src/App.js` og endre verdien til `API_URL` til ditt API (ikke ta med `/vippetangen`).
 *   Kjør kommandoen `npm run start` for å starte applikasjonen.
-*   Åpne `localhost:3000` og se at avgangene vises som forventet.
-    Åpne [localhost:3000](http://localhost:3000) og se at avgangene vises som forventet.
+*   Åpne [localhost:3000](http://localhost:3000) og se at avgangene vises som forventet.
 
 # Bonusoppgaver
 
